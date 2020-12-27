@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sunil Shastry">
+  <meta name="keywords" content="Timerley - A simple & aesthetic time counting application">
+  <meta name="description" content="Timerley is a specialized type of clock that helps for measuring specific time interval. Timerley counts downwards from the given limit, and turns on a soothing alarm tone when finished.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#ff3a20">
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ff3a20">
+  <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <title>Timerley</title>
+</head>
+<body>
+  <main class="main-content">
+    <section class="timer-container">
+      <div class="timer__header--container">
+        <h1 class="timer__header">Timerley</h1>
+      </div>
+
+      <div class="timer__app-container">
+        <div class="input-field-box">
+          <input type="number" class="timer__input" id="timer-input" autocomplete="off" spellcheck="false">
+          <span>sec</span>
+        </div>
+
+        <div class="button-container">
+          <div class="btn-box">
+            <label>Pause</label>
+            <button class="timer-btn" id="btn-pause"><i class="fas fa-pause"></i></button>
+          </div>
+
+          <div class="btn-box">
+            <label>Play</label>
+            <button class="timer-btn" id="btn-play"><i class="fas fa-play"></i></button>
+          </div>
+
+          <div class="btn-box">
+            <label>Stop</label>
+            <button class="timer-btn" id="btn-stop"><i class="fas fa-stop"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <audio src="./assets/sounds/daybreak.mp3" class="audio-box" id="audio"></audio>
+
+    <div class="social-container">
+      <a href="https://twitter.com/sunillshastry" target="_blank" title="Twitter" class="social-link">
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <a href="https://www.instagram.com/sunillshastry/" target="_blank" title="Instagram" class="social-link">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <a href="https://github.com/sunillshastry" target="_blank" title="GitHub" class="social-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <span class="built-by">
+      Built by <a href="https://www.sunilshastry.com" target="_blank">Sunil Shastry</a>
+    </span>
+  </main>
+  <script src="./js/script.js"></script>
+</body>
+</html>
