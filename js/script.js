@@ -14,7 +14,19 @@ class Timer {
 		this.playBtn.addEventListener("click", this.startTimer);
 		this.pauseBtn.addEventListener("click", this.pauseTimer);
 		this.stopBtn.addEventListener("click", this.stopTimer);
+		this.input.addEventListener("focus", this.inputFocus);
+		this.input.addEventListener("blur", this.inputBlur);
 	}
+	inputFocus = () => {
+		document
+			.querySelector(".timer__app-container")
+			.classList.toggle("focused-timerbox");
+	};
+	inputBlur = () => {
+		document
+			.querySelector(".timer__app-container")
+			.classList.toggle("focused-timerbox");
+	};
 	startTimer = () => {
 		this.audio.pause();
 		this.audio.currentTime = 0;
@@ -54,7 +66,7 @@ class Timer {
 	};
 	stopTimer = () => {
 		clearInterval(this.x);
-		this.input.value = "0";
+		this.input.value = "00";
 		this.input.disabled = false;
 		timerContainer.classList.remove("timer-start");
 		timerContainer.classList.add("finish-class");
